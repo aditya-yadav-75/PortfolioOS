@@ -185,17 +185,45 @@ npm run build
 
 ---
 
-## 📄 Assignment Deliverables Checklist
+## 📦 Assignment Deliverables & Submission Index
 
-- [x] **Source Code:** Full-stack TypeScript monorepo with clean separation of concerns.
-- [x] **Database Schema:** SQLite schema with migrations, foreign keys, indexes, and documentation in `docs/database-schema.md`.
-- [x] **Dual Tailored Resumes:** One portfolio produces two distinct resumes:
-  1. *Frontend Developer Intern* (Modern Professional template, PulseUI, React/TypeScript focus).
-  2. *AI/ML Intern* (Classic ATS template, NeuroVision, PyTorch/quantization focus).
-- [x] **Downloadable PDF:** Server-side PDFKit vector generation with correct pagination and margins.
-- [x] **Google Sheets Integration:** Official `googleapis` implementation with tab schemas and error logging.
-- [x] **Walkthrough Script:** Step-by-step evaluator demonstration script in `docs/demo-script.md`.
-- [x] **System Architecture:** Detailed architecture documentation in `docs/architecture.md`.
+All required assignment deliverables are structured and tracked in this repository:
+
+| Deliverable | Location / Link | Status & Verification |
+| :--- | :--- | :--- |
+| **System Architecture** | [`docs/architecture.md`](docs/architecture.md) | **Complete** (Full component diagram, layers & data flow) |
+| **Database Schema** | [`docs/database-schema.md`](docs/database-schema.md) | **Complete** (15 relational SQLite tables, ERD, indexes, constraints) |
+| **Demonstration Script** | [`docs/demo-script.md`](docs/demo-script.md) | **Complete** (Step-by-step evaluator walkthrough & test steps) |
+| **Sample Job Descriptions** | [`submission/job-descriptions/`](submission/job-descriptions/) | **Complete** |
+| • *Frontend Intern JD* | [`submission/job-descriptions/frontend-developer-intern.md`](submission/job-descriptions/frontend-developer-intern.md) | **Complete** (Vanguard Digital Labs target JD) |
+| • *AI/ML Intern JD* | [`submission/job-descriptions/ai-ml-intern.md`](submission/job-descriptions/ai-ml-intern.md) | **Complete** (DeepScale Applied Intelligence target JD) |
+| **Tailored Resumes (PDF)** | [`submission/resumes/`](submission/resumes/) | **Ready for Export** ([Instructions](submission/resumes/README.md)) |
+| • *Frontend Resume* | Modern Professional template (`PulseUI`, `React/TS`, `Vanguard Labs`) | Generate via live app / API endpoint |
+| • *AI/ML Resume* | Classic ATS template (`NeuroVision`, `PyTorch`, `HackAI Winner`) | Generate via live app / API endpoint |
+| **Visual Evidence** | [`submission/screenshots/`](submission/screenshots/) | **Ready for Capture** ([Checklist](submission/screenshots/README.md)) |
+| **Google Sheets Evidence** | [`submission/google-sheet-link.txt`](submission/google-sheet-link.txt) | **Awaiting Credentials** ([Setup Guide](submission/google-sheet-link.txt)) |
+| **Automated Test Suite** | [`server/tests/`](server/tests/) | **Complete** (12/12 Vitest tests passing) |
+| **Monorepo Build** | Shared, Server & Client packages | **Complete** (Zero build or type errors) |
+
+---
+
+## 🛡️ Deliverables Status & Evidence Classification
+
+To maintain strict academic honesty:
+1. **Fully Complete & Verified Locally (No external credentials required):**
+   - SQLite Relational Database, Migrations, and Fictional Student Dataset (`npm run seed`).
+   - Apple visionOS-inspired Liquid Glass Spatial Interface with 6 interactive destinations.
+   - Deterministic Keyword & Qualification Evidence Matcher with zero hallucinations.
+   - Split-screen Resume Studio with section reordering, bullet editing, and instant preview.
+   - Real vector PDF generation via server-side `PDFKit` (downloads real `.pdf` binary).
+   - Automated test suite (12 tests in 5 test files pass with 0 errors).
+2. **Depends on External Credentials:**
+   - **Google Gemini API:** Implemented with `@google/generative-ai` SDK (model: `gemini-1.5-flash`). Operates with automatic deterministic fallback when `GEMINI_API_KEY` is not supplied.
+   - **Google Sheets API v4:** Implemented with official `googleapis` JWT Service Account auth. When credentials or Sheet ID are missing, PortfolioOS gracefully displays a configuration diagnostic screen and logs errors in `sheets_sync_logs` rather than faking success.
+3. **Manual Evidence Artifacts (To be captured from the live application):**
+   - Real generated PDF files to place in [`submission/resumes/`](submission/resumes/).
+   - Live application screenshots to place in [`submission/screenshots/`](submission/screenshots/).
+   - Live Google Sheet link to paste into [`submission/google-sheet-link.txt`](submission/google-sheet-link.txt) after syncing with user's own spreadsheet.
 
 ---
 

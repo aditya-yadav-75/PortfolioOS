@@ -1,6 +1,8 @@
 import { v4 as uuidv4 } from 'uuid';
 import { getDatabase } from './connection';
 import { runMigrations } from './migrator';
+import { PortfolioService } from '../services/portfolio.service';
+import { ResumeService } from '../services/resume.service';
 
 export function seedDatabase(dbPath?: string): void {
   const db = getDatabase(dbPath);
@@ -334,7 +336,14 @@ export function seedDatabase(dbPath?: string): void {
   insertLang.run(uuidv4(), 'English', 'Native');
   insertLang.run(uuidv4(), 'Spanish', 'Conversational');
 
-  console.log('Fictional portfolio data seeded successfully.');
+  // Synthesize dual tailored demo resumes from seeded records
+  const portfolioService = new PortfolioService();
+  const resumeService = new ResumeService();
+  const seededPortfolio = portfolioService.getCompletePortfolio();
+  resumeService.generateDefaultTailoredResume(seededPortfolio, 'frontend');
+  resumeService.generateDefaultTailoredResume(seededPortfolio, 'ai_ml');
+
+  console.log('Fictional portfolio data and dual tailored resumes seeded successfully.');
 }
 
 // When executed directly via command line

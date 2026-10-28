@@ -1,0 +1,57 @@
+# PortfolioOS — Google Sheets Synchronization Evidence
+# Course: Semester III AI Tools & Prompt Engineering Assignment
+
+================================================================================
+GOOGLE SPREADSHEET SUBMISSION INSTRUCTIONS
+================================================================================
+
+To ensure academic and technical integrity, a fabricated or mock Google Sheets
+URL is NOT pre-filled in this file.
+
+Follow the instructions below to connect your real Google Sheet, run the export
+synchronization, and paste your live spreadsheet URL here for evaluation.
+
+--------------------------------------------------------------------------------
+STEP-BY-STEP SETUP & SYNCHRONIZATION:
+--------------------------------------------------------------------------------
+
+1. CREATE A TARGET SPREADSHEET:
+   - Go to https://sheets.new and create a new blank Google Sheet.
+   - Name it "PortfolioOS - Career Database Sync".
+   - Copy the Spreadsheet ID from the URL:
+     https://docs.google.com/spreadsheets/d/<SPREADSHEET_ID>/edit
+
+2. CONFIGURE SERVICE ACCOUNT CREDENTIALS:
+   - In Google Cloud Console (https://console.cloud.google.com/), enable the
+     "Google Sheets API".
+   - Create a Service Account and download its JSON key file.
+   - Save the JSON key file locally (e.g., as `google-credentials.json` in the
+     server root — this file is ignored by Git in `.gitignore`).
+   - Share your Google Sheet with the Service Account email address with
+     "Editor" permissions.
+
+3. CONFIGURE ENVIRONMENT:
+   In `.env`:
+     GOOGLE_SERVICE_ACCOUNT_KEY_PATH=./google-credentials.json
+     GOOGLE_SPREADSHEET_ID=<YOUR_REAL_SPREADSHEET_ID>
+
+4. EXECUTE LIVE EXPORT:
+   - In PortfolioOS, open "Google Sheets" (`http://localhost:5173/sheets`).
+   - Verify the Service Account email and Spreadsheet ID appear as "Configured".
+   - Click "Export All Tabs to Sheets".
+   - PortfolioOS will create and populate 7 dedicated worksheet tabs:
+       * Profile
+       * Education
+       * Skills
+       * Projects
+       * Experience
+       * Certifications
+       * Achievements
+     with stable database UUIDs in Column A to prevent duplicate rows.
+   - The sync event will appear with status SUCCESS in the Synchronization Audit Logs.
+
+5. RECORD YOUR REAL SPREADSHEET URL BELOW:
+--------------------------------------------------------------------------------
+REAL GOOGLE SPREADSHEET URL:
+[Paste your shared Google Spreadsheet URL here once synced]
+--------------------------------------------------------------------------------

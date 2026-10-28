@@ -133,3 +133,17 @@ This document provides a step-by-step walkthrough to demonstrate all technical r
    - Google Gemini API status (Active or Fallback mode).
    - SQLite Relational Database health (WAL mode, table row counts).
 3. Test **Download Complete JSON Backup** to verify full local data ownership.
+
+---
+
+## Step 7: Assembling Submission Deliverables
+
+1. **Tailored Resumes:**
+   - Save the downloaded PDF for the Frontend role to [`submission/resumes/Alex_Morgan_Frontend_Developer_Intern_Resume.pdf`](../submission/resumes/README.md).
+   - Save the downloaded PDF for the AI/ML role to [`submission/resumes/Alex_Morgan_AIML_Intern_Resume.pdf`](../submission/resumes/README.md).
+2. **Visual Evidence:**
+   - Capture high-resolution screenshots corresponding to the 8 views listed in [`submission/screenshots/README.md`](../submission/screenshots/README.md) and save them into `submission/screenshots/`.
+3. **Google Sheets Link:**
+   - Once synced with your own Google Sheet, paste the URL into [`submission/google-sheet-link.txt`](../submission/google-sheet-link.txt).
+4. **Job Descriptions:**
+   - Review [`submission/job-descriptions/frontend-developer-intern.md`](../submission/job-descriptions/frontend-developer-intern.md) and [`submission/job-descriptions/ai-ml-intern.md`](../submission/job-descriptions/ai-ml-intern.md).
